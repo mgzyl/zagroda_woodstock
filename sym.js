@@ -14,7 +14,7 @@ $(document).ready(function () {
         }
     }
 
-    var statusMsgs = ["Free hugs", "Zbieram na powrót do domu", "Zbieram uran dla Jurka", "Pomocy! Trzeźwieję!", "Kupię zioło", "SIÓÓÓÓÓÓDMAAAAAAAA!!!", "zaraz bedzie ciemno...", "ANDRZEEEEEEJ!!!"];
+    var statusMsgs = ["Free hugs", "Zbieram na powrót do domu", "Zbieram uran dla Jurka", "Pomocy! Trzeźwieję!", "Kupię zioło", "SIÓÓÓÓÓÓDMAAAAAAAA!!!", "zaraz bedzie ciemno...", "ANDRZEEEEEEJ!!!", "Tam leży zakopana martwa dziwka", "Zbieram na Gwiazdę Śmierci"];
 
     var users = ["Jakiś radom", "Jurek Owsiak", "Konik", "Kuba", "Emil", "Kwieciu", "MichałGzyl", "Zjarany punk", "Jezus", "Typowy woodstockowicz"]
 
@@ -35,6 +35,7 @@ $(document).ready(function () {
         if(val in woodDict) {
             let randomUser = users[Math.floor(Math.random()*users.length)];
             postMessage(randomUser, woodDict[val]());
+            $(document).scrollTop($(document).height());
         }
     }
 
